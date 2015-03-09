@@ -26,7 +26,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    
+
+    ///Users/hp/Library/Developer/CoreSimulator/Devices/98855855-9D3A-4ACE-9D69-2696CAC90C6F/data/Documents
+    ///Users/hp/Library/Developer/CoreSimulator/Devices/98855855-9D3A-4ACE-9D69-2696CAC90C6F/data/Containers/Data/Application/1AA9AFE5-9DAC-402D-BFCB-B31789418314/Documents
     [self dataInit];
     
     LeftViewController *leftViewController = [[LeftViewController alloc] init];
@@ -69,6 +71,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

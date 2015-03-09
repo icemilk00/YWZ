@@ -41,6 +41,21 @@ static BQData *BQShareData = nil;
          NSString *textFileContents = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"data" ofType:@"json"] encoding:NSUTF8StringEncoding error: & error];
         
         _BQShareArray = [[NSMutableArray alloc] initWithArray:[textFileContents objectFromJSONString]];
+
+        NSUserDefaults *_groupDefaults = [[NSUserDefaults alloc]initWithSuiteName:@"group.recentBQ"];
+        
+        if ([_groupDefaults objectForKey:RECENTDATA] == nil) {
+            NSDictionary *baseRecentDic = [NSDictionary dictionaryWithObjectsAndKeys:@"Rencent", @"en",
+                                           @"最近使用", @"one",
+                                           @"最近使用", @"text",
+                                           [NSArray array], @"yan",nil];
+            
+            [_groupDefaults setObject:baseRecentDic forKey:RECENTDATA];
+        }
+        
+        NSLog(@"aaaaa = %@", [_groupDefaults objectForKey:RECENTDATA]);
+
+        [_BQShareArray insertObject:[_groupDefaults objectForKey:RECENTDATA] atIndex:0];
     }
     
     return _BQShareArray;

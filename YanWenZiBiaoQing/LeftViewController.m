@@ -46,7 +46,14 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"LeftTableViewCell" owner:self options:nil] objectAtIndex:0];
     }
     
-    cell.headLabel.text = [[[[BQData sharedInstance].BQShareArray objectAtIndex:indexPath.row] objectForKey:@"yan"] objectAtIndex:0];
+    if (indexPath.row == 0) {
+        cell.headLabel.text = @"";
+    }
+    else
+    {
+        cell.headLabel.text = [[[[BQData sharedInstance].BQShareArray objectAtIndex:indexPath.row] objectForKey:@"yan"] objectAtIndex:0];
+    }
+    
     cell.cellLabel.text = [[[BQData sharedInstance].BQShareArray objectAtIndex:indexPath.row] objectForKey:@"text"];
     
     return cell;

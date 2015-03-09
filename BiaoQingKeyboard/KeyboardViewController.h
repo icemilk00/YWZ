@@ -14,9 +14,10 @@
 
 @interface KeyboardViewController : UIInputViewController <KeyBoardFootDelegate, UIScrollViewDelegate, KeyBoardBQDelegate, NumKeyBoardDelegate>
 {
-    
+    BOOL _isNeedReloadRecentBQ;
 }
-@property (nonatomic, strong) NSArray *dataBqArray;
+@property (nonatomic, strong) NSMutableArray *dataBqArray;
+@property (nonatomic, strong) NSMutableDictionary *recentBQDic;
 @property (nonatomic, strong) UIScrollView *categoryScrollView;
 @property (nonatomic, strong) KeyBoardFootView *keyBoardFootView;
 
@@ -24,4 +25,6 @@
 @property (nonatomic, strong) UIScrollView *keyBoardBQScrollView;
 
 @property (nonatomic, strong) NSMutableArray *hasLoadBQViewIndexArray;
+
+@property (nonatomic, strong) NSUserDefaults *groupDefaults;
 @end

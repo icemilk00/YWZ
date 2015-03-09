@@ -11,6 +11,7 @@
 
 #import "AppDelegate.h"
 
+#define RECENTDATA @"recentData"
 
 #define APPDELEGATE ((AppDelegate *)([UIApplication sharedApplication].delegate))
 #define TO_SHOW_BQ_VIEW @"toShowBQView"

@@ -33,6 +33,8 @@
 		E6EB74F91A47FAE2006B267A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EB74F81A47FAE2006B267A /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E6EB74FA1A47FAE2006B267A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EB74F81A47FAE2006B267A /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E6EB74FC1A47FB25006B267A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EB74FB1A47FB25006B267A /* libz.dylib */; };
+		E6F9D2361AAD75CC0088B3FD /* RecentBQ.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6F9D2341AAD6EDE0088B3FD /* RecentBQ.plist */; };
+		E6F9D2371AAD88F70088B3FD /* RecentBQ.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6F9D2341AAD6EDE0088B3FD /* RecentBQ.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		E6EB74F81A47FAE2006B267A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		E6EB74FB1A47FB25006B267A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E6EB74FD1A480478006B267A /* DefaultHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultHead.h; sourceTree = "<group>"; };
+		E6F9D2341AAD6EDE0088B3FD /* RecentBQ.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RecentBQ.plist; sourceTree = "<group>"; };
+		E6F9D23B1AADA3F80088B3FD /* BiaoQingKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BiaoQingKeyboard.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 				E6EB74FD1A480478006B267A /* DefaultHead.h */,
 				E6EB74F61A47FAE2006B267A /* JSONKit */,
 				E6EB74F31A47F9DF006B267A /* data.json */,
+				E6F9D2341AAD6EDE0088B3FD /* RecentBQ.plist */,
 				E6DAB4121A3FD9380061CF4A /* SideViewController */,
 				E6D78E571A2D95E900FE533B /* AppDelegate.h */,
 				E6D78E581A2D95E900FE533B /* AppDelegate.m */,
@@ -228,6 +233,7 @@
 		E6D78E7E1A2D962E00FE533B /* BiaoQingKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				E6F9D23B1AADA3F80088B3FD /* BiaoQingKeyboard.entitlements */,
 				E6D78E811A2D962E00FE533B /* KeyboardViewController.h */,
 				E6D78E821A2D962E00FE533B /* KeyboardViewController.m */,
 				E6BA34931A7B8222007DD692 /* KeyBoardFootView.h */,
@@ -342,17 +348,23 @@
 						DevelopmentTeam = PL54F4LJG7;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
 					E6D78E681A2D95E900FE533B = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = PL54F4LJG7;
 						TestTargetID = E6D78E4F1A2D95E900FE533B;
 					};
 					E6D78E7C1A2D962E00FE533B = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = PL54F4LJG7;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -381,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6F9D2371AAD88F70088B3FD /* RecentBQ.plist in Resources */,
 				E6DAB4241A4002F60061CF4A /* LeftTableViewCell.xib in Resources */,
 				E6EB74F41A47F9DF006B267A /* data.json in Resources */,
 				E6DAB4291A40195D0061CF4A /* ShowBiaoQingView.xib in Resources */,
@@ -400,6 +413,7 @@
 			files = (
 				E6CAB25D1A80684E00157D05 /* NumKeyBoardView.xib in Resources */,
 				E6EB74F51A47F9DF006B267A /* data.json in Resources */,
+				E6F9D2361AAD75CC0088B3FD /* RecentBQ.plist in Resources */,
 				E63AF7681A7D279100A3A54E /* KeyBoardFootView.xib in Resources */,
 				E6632F601A7F62DD00052248 /* moveButtonImage@2x.png in Resources */,
 			);
@@ -567,8 +581,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YanWenZiBiaoQing/YanWenZiBiaoQing.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = YanWenZiBiaoQing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -581,6 +595,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -592,6 +608,7 @@
 				INFOPLIST_FILE = YanWenZiBiaoQingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YanWenZiBiaoQing.app/YanWenZiBiaoQing";
 			};
 			name = Debug;
@@ -600,6 +617,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -607,6 +626,7 @@
 				INFOPLIST_FILE = YanWenZiBiaoQingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YanWenZiBiaoQing.app/YanWenZiBiaoQing";
 			};
 			name = Release;
@@ -614,7 +634,8 @@
 		E6D78E8A1A2D962E00FE533B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iOS Development: Zhu YaMing (NBZDLKU7R4)";
+				CODE_SIGN_ENTITLEMENTS = BiaoQingKeyboard/BiaoQingKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -632,7 +653,8 @@
 		E6D78E8B1A2D962E00FE533B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Youbei Online Network Technology Co., Ltd. (PL54F4LJG7)";
+				CODE_SIGN_ENTITLEMENTS = BiaoQingKeyboard/BiaoQingKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BiaoQingKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;

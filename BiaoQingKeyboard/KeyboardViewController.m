@@ -13,6 +13,8 @@
 #define CATEGORY_BUTTON_BASETAG  100
 #define BQ_SHOWVIEW_BASETAG      200
 
+
+
 @interface KeyboardViewController ()
 
 @end
@@ -28,12 +30,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Perform custom UI setup here
+    
+    self.groupDefaults = [[NSUserDefaults alloc]initWithSuiteName:@"group.recentBQ"];
+    
+    if ([_groupDefaults objectForKey:RECENTDATA] == nil) {
+        NSDictionary *baseRecentDic = [NSDictionary dictionaryWithObjectsAndKeys:@"Rencent", @"en",
+                                       @"最近使用", @"one",
+                                       @"最近使用", @"text",
+                                       [NSArray array], @"yan",nil];
+        
+        [_groupDefaults setObject:baseRecentDic forKey:RECENTDATA];
+    }
+    
+    NSLog(@"aaaaa = %@", [_groupDefaults objectForKey:RECENTDATA]);
+    
     //数据源
     NSError *error;
     NSString *textFileContents = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"data" ofType:@"json"] encoding:NSUTF8StringEncoding error: &error];
     
-    self.dataBqArray = [[NSArray alloc] initWithArray:[textFileContents objectFromJSONString]];
+    NSDictionary *recentTempDic = [[NSDictionary alloc] initWithDictionary:[_groupDefaults objectForKey:RECENTDATA]];
     
+    self.dataBqArray = [[NSMutableArray alloc] initWithArray:[textFileContents objectFromJSONString]];
+    self.recentBQDic = [[NSMutableDictionary alloc] initWithDictionary:recentTempDic];
+    
+    [_dataBqArray insertObject:recentTempDic atIndex:0];
     
     self.hasLoadBQViewIndexArray = [[NSMutableArray alloc] init];
 }
@@ -117,14 +137,27 @@
     //防止重复加载
     for (id tempIndex in _hasLoadBQViewIndexArray ) {
         if (index == [tempIndex integerValue]) {
+            
+            if (index == 0 && _isNeedReloadRecentBQ == YES) {
+                [_hasLoadBQViewIndexArray removeObject:[NSNumber numberWithInteger:index]];
+                _isNeedReloadRecentBQ = NO;
+                break;
+            }
+            
             return;
         }
     }
     
     [_hasLoadBQViewIndexArray addObject:[NSNumber numberWithInteger:index]];
-    
-    KeyBoardBQShowView *view = [[KeyBoardBQShowView alloc] initWithFrame:CGRectMake(index * _keyBoardBQScrollView.frame.size.width, 0.0f , _keyBoardBQScrollView.frame.size.width, _keyBoardBQScrollView.frame.size.height) andLoadData:[_dataBqArray objectAtIndex:index]];
+    NSLog(@"databqarray = %@", _dataBqArray);
+    KeyBoardBQShowView *view = [[KeyBoardBQShowView alloc] initWithFrame:CGRectMake(index * _keyBoardBQScrollView.frame.size.width, 0.0f , _keyBoardBQScrollView.frame.size.width, _keyBoardBQScrollView.frame.size.height) andLoadData:index == 0 ? _recentBQDic : [_dataBqArray objectAtIndex:index]];
     view.keyBoardBQDelegate = self;
+    view.tag = BQ_SHOWVIEW_BASETAG + index;
+    
+    if ([_keyBoardBQScrollView viewWithTag:view.tag]) {
+        [[_keyBoardBQScrollView viewWithTag:view.tag] removeFromSuperview];
+    }
+    
     [_keyBoardBQScrollView addSubview:view];
 
 }
@@ -134,6 +167,27 @@
     NSString *bqStr = sender.titleLabel.text;
     
     [self.textDocumentProxy insertText:bqStr];
+    
+    [self makeRecentBQData:bqStr];
+    
+    [_groupDefaults setObject:_recentBQDic forKey:RECENTDATA];
+    
+    _isNeedReloadRecentBQ = YES;
+}
+
+-(void)makeRecentBQData:(NSString *)bqStr
+{
+    NSMutableArray *tempArray = [[NSMutableArray alloc] initWithArray:[_recentBQDic objectForKey:@"yan"]];
+    
+    for (NSString *str in tempArray) {
+        if ([str isEqualToString:bqStr]) {
+            [tempArray removeObject:str];
+            break;
+        }
+    }
+    
+    [tempArray insertObject:bqStr atIndex:0];
+    [_recentBQDic setObject:tempArray forKey:@"yan"];
 }
 
 -(void)categoryButtonClicked:(UIButton *)sender
