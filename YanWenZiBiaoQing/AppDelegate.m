@@ -26,16 +26,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-
-    ///Users/hp/Library/Developer/CoreSimulator/Devices/98855855-9D3A-4ACE-9D69-2696CAC90C6F/data/Documents
-    ///Users/hp/Library/Developer/CoreSimulator/Devices/98855855-9D3A-4ACE-9D69-2696CAC90C6F/data/Containers/Data/Application/1AA9AFE5-9DAC-402D-BFCB-B31789418314/Documents
+    
     [self dataInit];
     
     LeftViewController *leftViewController = [[LeftViewController alloc] init];
     leftViewController.view.backgroundColor = [UIColor redColor];
     
     MainViewController *mainViewController = [[MainViewController alloc] init];
-    mainViewController.view.backgroundColor = [UIColor blueColor];
     
     self.sideViewController=[[YRSideViewController alloc] initWithNibName:nil bundle:nil];
     _sideViewController.rootViewController = mainViewController;

@@ -42,8 +42,6 @@
         [_groupDefaults setObject:baseRecentDic forKey:RECENTDATA];
     }
     
-    NSLog(@"aaaaa = %@", [_groupDefaults objectForKey:RECENTDATA]);
-    
     //数据源
     NSError *error;
     NSString *textFileContents = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"data" ofType:@"json"] encoding:NSUTF8StringEncoding error: &error];
@@ -66,7 +64,7 @@
     
     self.keyBoardMainView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height)];
     [_keyBoardMainView sizeToFit];
-    _keyBoardMainView.backgroundColor = [UIColor clearColor];
+    _keyBoardMainView.backgroundColor = [UIColor redColor];
     self.keyBoardMainView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.view addSubview:_keyBoardMainView];

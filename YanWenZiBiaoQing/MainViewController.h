@@ -13,5 +13,7 @@
 @property (nonatomic, strong) UIScrollView *showScrollView;
 @property (nonatomic, strong) UIView *leftTouchView;
 @property (nonatomic, strong) UIButton *menuButton;
+@property (nonatomic, strong) UILabel *showEnLabel;
 @property (nonatomic, strong) UIScrollView *footShowScrollView;
+
 @end

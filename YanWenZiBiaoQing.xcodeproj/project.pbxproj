@@ -14,6 +14,10 @@
 		E6632F601A7F62DD00052248 /* moveButtonImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6632F5F1A7F62DD00052248 /* moveButtonImage@2x.png */; };
 		E6BA34961A7B8222007DD692 /* KeyBoardFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BA34941A7B8222007DD692 /* KeyBoardFootView.m */; };
 		E6BA34971A7B8222007DD692 /* KeyBoardFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BA34941A7B8222007DD692 /* KeyBoardFootView.m */; };
+		E6BE31541AB875820007646E /* left_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6BE31521AB875820007646E /* left_menu@2x.png */; };
+		E6BE31551AB875820007646E /* left_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6BE31521AB875820007646E /* left_menu@2x.png */; };
+		E6BE31561AB875820007646E /* left_menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6BE31531AB875820007646E /* left_menu@3x.png */; };
+		E6BE31571AB875820007646E /* left_menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6BE31531AB875820007646E /* left_menu@3x.png */; };
 		E6CAB25B1A80683600157D05 /* NumKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CAB25A1A80683600157D05 /* NumKeyBoardView.m */; };
 		E6CAB25D1A80684E00157D05 /* NumKeyBoardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6CAB25C1A80684E00157D05 /* NumKeyBoardView.xib */; };
 		E6D78E561A2D95E900FE533B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D78E551A2D95E900FE533B /* main.m */; };
@@ -85,6 +89,8 @@
 		E6632F5F1A7F62DD00052248 /* moveButtonImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "moveButtonImage@2x.png"; path = "image/moveButtonImage@2x.png"; sourceTree = "<group>"; };
 		E6BA34931A7B8222007DD692 /* KeyBoardFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBoardFootView.h; sourceTree = "<group>"; };
 		E6BA34941A7B8222007DD692 /* KeyBoardFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardFootView.m; sourceTree = "<group>"; };
+		E6BE31521AB875820007646E /* left_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu@2x.png"; sourceTree = "<group>"; };
+		E6BE31531AB875820007646E /* left_menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu@3x.png"; sourceTree = "<group>"; };
 		E6CAB2591A80683600157D05 /* NumKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumKeyBoardView.h; sourceTree = "<group>"; };
 		E6CAB25A1A80683600157D05 /* NumKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumKeyBoardView.m; sourceTree = "<group>"; };
 		E6CAB25C1A80684E00157D05 /* NumKeyBoardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumKeyBoardView.xib; sourceTree = "<group>"; };
@@ -155,6 +161,15 @@
 			name = image;
 			sourceTree = "<group>";
 		};
+		E6BE31511AB8755E0007646E /* image */ = {
+			isa = PBXGroup;
+			children = (
+				E6BE31521AB875820007646E /* left_menu@2x.png */,
+				E6BE31531AB875820007646E /* left_menu@3x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		E6D78E471A2D95E900FE533B = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +194,7 @@
 		E6D78E521A2D95E900FE533B /* YanWenZiBiaoQing */ = {
 			isa = PBXGroup;
 			children = (
+				E6BE31511AB8755E0007646E /* image */,
 				E65CECBF1A5BD62500CCC493 /* YanWenZiBiaoQing.entitlements */,
 				E6EB74FD1A480478006B267A /* DefaultHead.h */,
 				E6EB74F61A47FAE2006B267A /* JSONKit */,
@@ -396,7 +412,9 @@
 				E6F9D2371AAD88F70088B3FD /* RecentBQ.plist in Resources */,
 				E6DAB4241A4002F60061CF4A /* LeftTableViewCell.xib in Resources */,
 				E6EB74F41A47F9DF006B267A /* data.json in Resources */,
+				E6BE31561AB875820007646E /* left_menu@3x.png in Resources */,
 				E6DAB4291A40195D0061CF4A /* ShowBiaoQingView.xib in Resources */,
+				E6BE31541AB875820007646E /* left_menu@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,11 +429,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6BE31551AB875820007646E /* left_menu@2x.png in Resources */,
 				E6CAB25D1A80684E00157D05 /* NumKeyBoardView.xib in Resources */,
 				E6EB74F51A47F9DF006B267A /* data.json in Resources */,
 				E6F9D2361AAD75CC0088B3FD /* RecentBQ.plist in Resources */,
 				E63AF7681A7D279100A3A54E /* KeyBoardFootView.xib in Resources */,
 				E6632F601A7F62DD00052248 /* moveButtonImage@2x.png in Resources */,
+				E6BE31571AB875820007646E /* left_menu@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,8 +518,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iOS Development: Zhu YaMing (NBZDLKU7R4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: Zhu YaMing (NBZDLKU7R4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -516,10 +536,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "ac998c3e-7001-4501-8689-171dddcee161";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -541,8 +561,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iOS Development: Zhu YaMing (NBZDLKU7R4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: Zhu YaMing (NBZDLKU7R4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -553,9 +573,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "ac998c3e-7001-4501-8689-171dddcee161";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -569,7 +589,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = YanWenZiBiaoQing/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -581,10 +601,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YanWenZiBiaoQing/YanWenZiBiaoQing.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = YanWenZiBiaoQing/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -642,7 +662,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = BiaoQingKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -657,7 +677,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BiaoQingKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

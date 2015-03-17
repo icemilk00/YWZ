@@ -103,8 +103,9 @@
         bqButton.tag = 1000 + i;
         
         bqButton.titleLabel.font = DEFAULT_FONT(12);
+        [bqButton setTitleColor:[UIColor colorWithRed:67.0f/255.0f green:67.0f/255.0f blue:67.0f/255.0f alpha:1] forState:UIControlStateNormal];
         [bqButton setTitle:bqTempStr forState:UIControlStateNormal];
-        bqButton.backgroundColor = [UIColor redColor];
+        bqButton.backgroundColor = [UIColor colorWithRed:220.0f/255.0f green:220.0f/255.0f blue:220.0f/255.0f alpha:1];
         [_showBQScrollView addSubview:bqButton];
         
         bqHeight = bqButton.frame.origin.y + bqButton.frame.size.height;
