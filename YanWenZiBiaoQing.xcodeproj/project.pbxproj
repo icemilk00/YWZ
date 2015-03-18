@@ -11,7 +11,6 @@
 		E65CECC21A5BDA0600CCC493 /* BQData.m in Sources */ = {isa = PBXBuildFile; fileRef = E65CECC11A5BDA0600CCC493 /* BQData.m */; };
 		E65CECC31A5BDA0600CCC493 /* BQData.m in Sources */ = {isa = PBXBuildFile; fileRef = E65CECC11A5BDA0600CCC493 /* BQData.m */; };
 		E6632F5D1A7F50E700052248 /* KeyBoardBQShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6632F5C1A7F50E700052248 /* KeyBoardBQShowView.m */; };
-		E6632F601A7F62DD00052248 /* moveButtonImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6632F5F1A7F62DD00052248 /* moveButtonImage@2x.png */; };
 		E6BA34961A7B8222007DD692 /* KeyBoardFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BA34941A7B8222007DD692 /* KeyBoardFootView.m */; };
 		E6BA34971A7B8222007DD692 /* KeyBoardFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BA34941A7B8222007DD692 /* KeyBoardFootView.m */; };
 		E6BE31541AB875820007646E /* left_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6BE31521AB875820007646E /* left_menu@2x.png */; };
@@ -86,7 +85,6 @@
 		E65CECC11A5BDA0600CCC493 /* BQData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQData.m; sourceTree = "<group>"; };
 		E6632F5B1A7F50E700052248 /* KeyBoardBQShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBoardBQShowView.h; sourceTree = "<group>"; };
 		E6632F5C1A7F50E700052248 /* KeyBoardBQShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardBQShowView.m; sourceTree = "<group>"; };
-		E6632F5F1A7F62DD00052248 /* moveButtonImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "moveButtonImage@2x.png"; path = "image/moveButtonImage@2x.png"; sourceTree = "<group>"; };
 		E6BA34931A7B8222007DD692 /* KeyBoardFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBoardFootView.h; sourceTree = "<group>"; };
 		E6BA34941A7B8222007DD692 /* KeyBoardFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardFootView.m; sourceTree = "<group>"; };
 		E6BE31521AB875820007646E /* left_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu@2x.png"; sourceTree = "<group>"; };
@@ -153,14 +151,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E6632F5E1A7F62C600052248 /* image */ = {
-			isa = PBXGroup;
-			children = (
-				E6632F5F1A7F62DD00052248 /* moveButtonImage@2x.png */,
-			);
-			name = image;
-			sourceTree = "<group>";
-		};
 		E6BE31511AB8755E0007646E /* image */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,7 +250,6 @@
 				E6CAB2591A80683600157D05 /* NumKeyBoardView.h */,
 				E6CAB25A1A80683600157D05 /* NumKeyBoardView.m */,
 				E6CAB25C1A80684E00157D05 /* NumKeyBoardView.xib */,
-				E6632F5E1A7F62C600052248 /* image */,
 				E6D78E7F1A2D962E00FE533B /* Supporting Files */,
 			);
 			path = BiaoQingKeyboard;
@@ -434,7 +423,6 @@
 				E6EB74F51A47F9DF006B267A /* data.json in Resources */,
 				E6F9D2361AAD75CC0088B3FD /* RecentBQ.plist in Resources */,
 				E63AF7681A7D279100A3A54E /* KeyBoardFootView.xib in Resources */,
-				E6632F601A7F62DD00052248 /* moveButtonImage@2x.png in Resources */,
 				E6BE31571AB875820007646E /* left_menu@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
