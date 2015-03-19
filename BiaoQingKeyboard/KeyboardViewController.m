@@ -30,6 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Perform custom UI setup here
+//    self.view.backgroundColor = [UIColor colorWithRed:0.0f/255.0f green:104.0f/255.0f blue:183.0f/255.0f alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:163.0f/255.0f green:198.0f/255.0f blue:204.0f/255.0f alpha:1];
     
     self.groupDefaults = [[NSUserDefaults alloc]initWithSuiteName:@"group.recentBQ"];
     
@@ -64,7 +66,7 @@
     
     self.keyBoardMainView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height)];
     [_keyBoardMainView sizeToFit];
-    _keyBoardMainView.backgroundColor = [UIColor redColor];
+    _keyBoardMainView.backgroundColor = [UIColor clearColor];
     self.keyBoardMainView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.view addSubview:_keyBoardMainView];
@@ -108,7 +110,7 @@
         [categoryButton setTitle:[[_dataBqArray objectAtIndex:i] objectForKey:@"text"] forState:UIControlStateNormal];
         [categoryButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [categoryButton addTarget:self action:@selector(categoryButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        categoryButton.backgroundColor = [UIColor lightGrayColor];
+        categoryButton.backgroundColor = [UIColor clearColor];
         categoryButton.titleLabel.font = DEFAULT_FONT(13);
         [_categoryScrollView addSubview:categoryButton];
     }

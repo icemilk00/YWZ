@@ -99,6 +99,9 @@
     
     //设置右标签字
     _showEnLabel.text = [[[BQData sharedInstance].BQShareArray objectAtIndex:currentIndex] objectForKey:@"en"];
+    
+    //设置左侧栏颜色
+    [[NSNotificationCenter defaultCenter] postNotificationName:CHANGE_BG_COLOR object:self.view.backgroundColor];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -122,10 +125,16 @@
     
     //设置背景颜色
     NSInteger currentIndex = scrollView.contentOffset.x / scrollView.frame.size.width;
-    self.view.backgroundColor = [_bgColorArray objectAtIndex:(currentIndex % _bgColorArray.count)];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.view.backgroundColor = [_bgColorArray objectAtIndex:(currentIndex % _bgColorArray.count)];
+    }];
     
     //设置右标签字
     _showEnLabel.text = [[[BQData sharedInstance].BQShareArray objectAtIndex:currentIndex] objectForKey:@"en"];
+    
+    //设置左侧栏颜色
+    [[NSNotificationCenter defaultCenter] postNotificationName:CHANGE_BG_COLOR object:self.view.backgroundColor];
 }
 
 //-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

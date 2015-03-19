@@ -10,6 +10,8 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+#import "DefaultHead.h"
+
 @interface YRSideViewController ()<UIGestureRecognizerDelegate>{
     UIView *_baseView;//目前是_baseView
     UIView *_currentView;//其实就是rootViewController.view

@@ -17,6 +17,9 @@
 		E6BE31551AB875820007646E /* left_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6BE31521AB875820007646E /* left_menu@2x.png */; };
 		E6BE31561AB875820007646E /* left_menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6BE31531AB875820007646E /* left_menu@3x.png */; };
 		E6BE31571AB875820007646E /* left_menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6BE31531AB875820007646E /* left_menu@3x.png */; };
+		E6C4E96A1ABA67E400596AD1 /* main_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C4E9691ABA67E400596AD1 /* main_bg@2x.png */; };
+		E6C4E96C1ABA682000596AD1 /* main_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C4E96B1ABA682000596AD1 /* main_bg@3x.png */; };
+		E6C4E9721ABAB14100596AD1 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C4E9711ABAB14100596AD1 /* SettingViewController.m */; };
 		E6CAB25B1A80683600157D05 /* NumKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CAB25A1A80683600157D05 /* NumKeyBoardView.m */; };
 		E6CAB25D1A80684E00157D05 /* NumKeyBoardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6CAB25C1A80684E00157D05 /* NumKeyBoardView.xib */; };
 		E6D78E561A2D95E900FE533B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D78E551A2D95E900FE533B /* main.m */; };
@@ -89,6 +92,10 @@
 		E6BA34941A7B8222007DD692 /* KeyBoardFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardFootView.m; sourceTree = "<group>"; };
 		E6BE31521AB875820007646E /* left_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu@2x.png"; sourceTree = "<group>"; };
 		E6BE31531AB875820007646E /* left_menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu@3x.png"; sourceTree = "<group>"; };
+		E6C4E9691ABA67E400596AD1 /* main_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_bg@2x.png"; sourceTree = "<group>"; };
+		E6C4E96B1ABA682000596AD1 /* main_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_bg@3x.png"; sourceTree = "<group>"; };
+		E6C4E9701ABAB14100596AD1 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		E6C4E9711ABAB14100596AD1 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		E6CAB2591A80683600157D05 /* NumKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumKeyBoardView.h; sourceTree = "<group>"; };
 		E6CAB25A1A80683600157D05 /* NumKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumKeyBoardView.m; sourceTree = "<group>"; };
 		E6CAB25C1A80684E00157D05 /* NumKeyBoardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumKeyBoardView.xib; sourceTree = "<group>"; };
@@ -154,6 +161,8 @@
 		E6BE31511AB8755E0007646E /* image */ = {
 			isa = PBXGroup;
 			children = (
+				E6C4E9691ABA67E400596AD1 /* main_bg@2x.png */,
+				E6C4E96B1ABA682000596AD1 /* main_bg@3x.png */,
 				E6BE31521AB875820007646E /* left_menu@2x.png */,
 				E6BE31531AB875820007646E /* left_menu@3x.png */,
 			);
@@ -205,6 +214,8 @@
 				E6DAB4281A40195D0061CF4A /* ShowBiaoQingView.xib */,
 				E65CECC01A5BDA0600CCC493 /* BQData.h */,
 				E65CECC11A5BDA0600CCC493 /* BQData.m */,
+				E6C4E9701ABAB14100596AD1 /* SettingViewController.h */,
+				E6C4E9711ABAB14100596AD1 /* SettingViewController.m */,
 				E6D78E531A2D95E900FE533B /* Supporting Files */,
 			);
 			path = YanWenZiBiaoQing;
@@ -399,7 +410,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6F9D2371AAD88F70088B3FD /* RecentBQ.plist in Resources */,
+				E6C4E96C1ABA682000596AD1 /* main_bg@3x.png in Resources */,
 				E6DAB4241A4002F60061CF4A /* LeftTableViewCell.xib in Resources */,
+				E6C4E96A1ABA67E400596AD1 /* main_bg@2x.png in Resources */,
 				E6EB74F41A47F9DF006B267A /* data.json in Resources */,
 				E6BE31561AB875820007646E /* left_menu@3x.png in Resources */,
 				E6DAB4291A40195D0061CF4A /* ShowBiaoQingView.xib in Resources */,
@@ -443,6 +456,7 @@
 				E6DAB41F1A3FE1B40061CF4A /* MainViewController.m in Sources */,
 				E6EB74F91A47FAE2006B267A /* JSONKit.m in Sources */,
 				E6D78E561A2D95E900FE533B /* main.m in Sources */,
+				E6C4E9721ABAB14100596AD1 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

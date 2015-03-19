@@ -35,7 +35,7 @@
         CGRect showViewFrame = CGRectMake(0.0f, 0.0f, frame.size.width , frame.size.height );
         
         self.showBQScrollView = [[UIScrollView alloc] initWithFrame:showViewFrame];
-        _showBQScrollView.backgroundColor = [UIColor whiteColor];
+        _showBQScrollView.backgroundColor = [UIColor clearColor];
         _showBQScrollView.showsHorizontalScrollIndicator = NO;
         _showBQScrollView.showsVerticalScrollIndicator = NO;
         [self addSubview:_showBQScrollView];
@@ -97,7 +97,7 @@
         
         bqButton.titleLabel.font = DEFAULT_FONT(12);
         [bqButton setTitle:bqTempStr forState:UIControlStateNormal];
-        bqButton.backgroundColor = [UIColor lightGrayColor];
+        bqButton.backgroundColor = [UIColor whiteColor];
         [bqButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [bqButton addTarget:self action:@selector(bqButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [_showBQScrollView addSubview:bqButton];

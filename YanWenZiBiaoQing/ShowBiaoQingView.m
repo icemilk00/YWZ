@@ -39,7 +39,9 @@
         _showBQScrollView.backgroundColor = [UIColor whiteColor];
         _showBQScrollView.layer.cornerRadius = 15;
         _showBQScrollView.layer.masksToBounds = YES;
-        
+        _showBQScrollView.showsHorizontalScrollIndicator = NO;
+        _showBQScrollView.showsVerticalScrollIndicator = NO;
+
         _showBQScrollView.layer.shadowOffset = CGSizeMake(0, 3); //设置阴影的偏移量
         _showBQScrollView.layer.shadowRadius = 5.0;  //设置阴影的半径
         _showBQScrollView.layer.shadowColor = [UIColor blackColor].CGColor; //设置阴影的颜色为黑色

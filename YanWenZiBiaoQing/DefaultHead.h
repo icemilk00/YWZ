@@ -15,5 +15,6 @@
 
 #define APPDELEGATE ((AppDelegate *)([UIApplication sharedApplication].delegate))
 #define TO_SHOW_BQ_VIEW @"toShowBQView"
+#define CHANGE_BG_COLOR @"changeBgColor"
 #define DEFAULT_FONT(fontSize) [UIFont fontWithName:@"Helvetica" size:fontSize]     //通用字体，可定义大小
 #endif

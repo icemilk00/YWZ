@@ -11,5 +11,8 @@
 @interface LeftViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong , nonatomic) UITableView *leftTableView;
+@property (strong , nonatomic) UIImageView *bgImageView;
+
+@property (strong , nonatomic) UIButton *settingButton;
 
 @end

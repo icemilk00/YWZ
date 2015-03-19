@@ -30,7 +30,6 @@
     [self dataInit];
     
     LeftViewController *leftViewController = [[LeftViewController alloc] init];
-    leftViewController.view.backgroundColor = [UIColor redColor];
     
     MainViewController *mainViewController = [[MainViewController alloc] init];
     
